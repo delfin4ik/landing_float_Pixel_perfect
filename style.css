@@ -1,4 +1,6 @@
 :root {
+  --background-color: #FFFFFF;
+
   --text-color-main: #3D4E61;
   --text-color-link: #687C94;
   --text-color-button: #118488;
@@ -29,8 +31,8 @@ body {
   font-size: 16px;
   line-height: 19px;
   font-family: Avenir, 'Roboto', sans-serif;
-  color: #3D4E61;
-  background-color: #FFFFFF;
+  color: var(--text-color-main);
+  background-color: var(--background-color);
 }
 
 a {
@@ -48,9 +50,20 @@ a {
   clear: both;
 }
 
+.header-wrap {
+  width: 100%;
+  height: 60px;
+  background-color: var(--background-color);  
+  position: fixed;  
+  top: 0;  
+  z-index: 100;
+  box-shadow: 0px 1px 0px var(--border-color-modal);
+}
+
 .header {
   height: 60px;
 }
+
 
 .header-logo {
   float: left;
@@ -69,7 +82,10 @@ a {
 .header-menu_item {
   display: inline-block;
   width: 76.42px;
+  font-size: var(--font-size-main);
+  line-height: var(--line-height-main);
   color: var(--text-color-main);
+  font-weight: bold;
 }
 
 .header-menu_item:first-child{
@@ -107,11 +123,6 @@ a {
   display: inline-block;
   width: 505px;
 }
-
-/* .main-wrap_column2 {
-  float: right;
-  width: 350px;
-} */
 
 .main-section {
   width: 500px;
@@ -270,7 +281,7 @@ a {
 }
 
 .main-section-bottom_h2 {
-  width: 196px;
+  width: 206px;
   height: 33px;
   margin-top: 14.58px;
   font-size: var(--font-size-h2);
@@ -355,9 +366,14 @@ a {
   margin-left: 30px;
 }
 
+/* Removes arrows from form field */
+/* input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+-webkit-appearance: none; margin:0;} */
+
 .modal-date {
   margin-top: 39px;
-  padding: 13.75px 199px 14.25px 17px;
+  padding: 13.75px 15px 14.25px 17px;
   font-size: var(--font-size-main);
   line-height: var(--line-height-main);
   color: var(--text-color-main);
@@ -365,7 +381,7 @@ a {
 
 .modal-guests {
   margin-top: 16px;
-  padding: 13.75px 180px 14.25px 17px;
+  padding: 13.75px 15px 14.25px 17px;
   font-size: var(--font-size-main);
   line-height: var(--line-height-main);
   color: var(--text-color-main);
@@ -384,7 +400,7 @@ a {
 }
 
 .footer {
-  box-shadow: 0px -1px 0px #E1E7ED;
+  box-shadow: 0px -1px 0px var(--border-color-modal);
   margin-top: 78.58px;
 }
 

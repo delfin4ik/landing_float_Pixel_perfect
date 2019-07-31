@@ -4,12 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="reset.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Landing</title>
   </head>
   <body>
+    <div class="header-wrap">
     <header class="header clearfix">
       <div class="header-logo">
         <img src="img/logo.png" alt="Logo">
@@ -24,7 +26,7 @@
            --><a class="header-menu_item" href="#">Messages</a>
       </nav>
     </header>
-
+    </div>
     <picture class="main-picture">
       <source media="(max-width: 1440px)" srcset="img/Image_small.jpg">
       <source media="(min-width: 1441px)" srcset="img/Image_big.jpg">
@@ -93,8 +95,8 @@
       <div class="main-wrap_column2">
           <form class="modal" action="#">
             <h3 class="modal_header">25$ per night</h3>
-              <input class="modal-field modal-date" type="number" name="date" placeholder="Date">
-              <input class="modal-field modal-guests" type="number" name="guests" placeholder="Guests">
+              <input class="modal-field modal-date" type="number" name="date" placeholder="Date" min="0">
+              <input class="modal-field modal-guests" type="number" name="guests" placeholder="Guests" min="0">
               <input class="modal-field modal-btn" type="submit" name="book" value="Book">
           </form>
       </div>
